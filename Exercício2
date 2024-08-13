@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <locale.h>
+int main ()
+{
+ setlocale(LC_ALL,"portuguese");
+ float Receita, Despesa, Saldo;
+ printf("\n\nInsira sua receita diária: ");
+ scanf("%f",&Receita);
+ printf("\n\nInsira sua despesa diária: ");
+ scanf("%f",&Despesa);
+ Saldo = Receita - Despesa;
+ printf("\n\nSaldo: %f \n\n",Saldo);
+ return 0;
+}
