@@ -5,12 +5,12 @@ int main ()
  setlocale(LC_ALL,"portuguese");
  int VTurno1, VTurno2, Visitantes_no_dia;
 
- printf("Número de visitantes no primeiro turno: ");
+ printf("\n\nNúmero de visitantes no primeiro turno: ");
  scanf("%d",&VTurno1);
- printf("Número de visitantes no segundo turno: ");
+ printf("\n\nNúmero de visitantes no segundo turno: ");
  scanf("%d",&VTurno2);
  Visitantes_no_dia = VTurno1 + VTurno2;
- printf("Visitantes no dia: %d ",Visitantes_no_dia);
+ printf("\n\nVisitantes no dia: %d \n\n",Visitantes_no_dia);
 return (0);
 }
 
