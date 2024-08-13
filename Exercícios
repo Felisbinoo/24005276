@@ -1,1 +1,16 @@
-char oi;
+#include <stdio.h>
+#include <locale.h>
+int main ()
+{
+ setlocale(LC_ALL,"portuguese");
+ int VTurno1, VTurno2, Visitantes_no_dia;
+
+ printf("Número de visitantes no primeiro turno: ");
+ scanf("%d",&VTurno1);
+ printf("Número de visitantes no segundo turno: ");
+ scanf("%d",&VTurno2);
+ Visitantes_no_dia = VTurno1 + VTurno2;
+ printf("Visitantes no dia: %d ",Visitantes_no_dia);
+return (0);
+}
+
