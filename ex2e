@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include <locale.h>
 
 int main() {
+    setlocale(LC_ALL, "Portuguese");
     float largura, altura;
     float area, tinta_necessaria, latas_necessarias;
     const float CONSUMO_TINTA_M2 = 300.0;
