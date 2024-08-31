@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main() {
+    int a = 76; 
+    printf("%d\n", a);
+    return 0;
+
+    O problema reside em três fatores: a declaração das variáveis deve sempre ser realizada no início; deve-se declarar uma variável, algo que não havia sido feito; no printf, a parte entre aspas possuía espaços indevidos.
