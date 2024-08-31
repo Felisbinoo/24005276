@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(){
+    float a,b,c;
+    printf("Digite o primeiro numero: ");
+    scanf("%f", &a);
+    printf("Digite o segundo numero: ");
+    scanf("%f", &b);
+    printf("Digite o terceiro numero: ");
+    scanf("%f", &c);
+    printf("Os numeros na ordem inversa sao= %f, %f, %f", c, b, a);
+    return 0;
