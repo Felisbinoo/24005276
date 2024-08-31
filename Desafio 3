@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+
+    setlocale(LC_ALL,"Portuguese");
+
+    double preco_acao1 = 24.13;
+    double dividendo_acao1 = 17.00;
+    double preco_acao2 = 11.00;
+    double dividendo_acao2 = 35.00;
+    double preco_acao3 = 38.65;
+    double dividendo_acao3 = 25.00;
+
+    double valor_total = 1000.00;
+
+    double valor_por_acao = valor_total / 3.0;
+
+    int quantidade_acao1 = (int)(valor_por_acao / preco_acao1);
+    int quantidade_acao2 = (int)(valor_por_acao / preco_acao2);
+    int quantidade_acao3 = (int)(valor_por_acao / preco_acao3);
+
+    double total_investido_acao1 = quantidade_acao1 * preco_acao1;
+    double total_investido_acao2 = quantidade_acao2 * preco_acao2;
+    double total_investido_acao3 = quantidade_acao3 * preco_acao3;
+
+    double dividendo_total_acao1 = quantidade_acao1 * dividendo_acao1;
+    double dividendo_total_acao2 = quantidade_acao2 * dividendo_acao2;
+    double dividendo_total_acao3 = quantidade_acao3 * dividendo_acao3;
+
+    double dividend_yield_acao1 = (dividendo_acao1 / preco_acao1) * 100;
+    double dividend_yield_acao2 = (dividendo_acao2 / preco_acao2) * 100;
+    double dividend_yield_acao3 = (dividendo_acao3 / preco_acao3) * 100;
+
+    printf("Investimento de R$%.2f em cada ação:\n", valor_por_acao);
+    printf("Ação 1:\n");
+    printf("  Quantidade de ações: %d\n", quantidade_acao1);
+    printf("  Total investido: R$%.2f\n", total_investido_acao1);
+    printf("  Dividend Yield: %.2f%%\n", dividend_yield_acao1);
+    printf("  Dividendos totais: R$%.2f\n\n", dividendo_total_acao1);
+
+    printf("Ação 2:\n");
+    printf("  Quantidade de ações: %d\n", quantidade_acao2);
+    printf("  Total investido: R$%.2f\n", total_investido_acao2);
+    printf("  Dividend Yield: %.2f%%\n", dividend_yield_acao2);
+    printf("  Dividendos totais: R$%.2f\n\n", dividendo_total_acao2);
+
+    printf("Ação 3:\n");
+    printf("  Quantidade de ações: %d\n", quantidade_acao3);
+    printf("  Total investido: R$%.2f\n", total_investido_acao3);
+    printf("  Dividend Yield: %.2f%%\n", dividend_yield_acao3);
+    printf("  Dividendos totais: R$%.2f\n", dividendo_total_acao3);
+
+    return 0;
+}
