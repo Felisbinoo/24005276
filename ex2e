@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    float largura, altura;
+    float area, tinta_necessaria, latas_necessarias;
+    const float CONSUMO_TINTA_M2 = 300.0;
+    const float CAPACIDADE_LATA_LITROS = 2.0;
+    const float CAPACIDADE_LATA_ML = CAPACIDADE_LATA_LITROS * 1000;
+
+    printf("Digite a largura da parede em metros: ");
+    scanf("%f", &largura);
+    printf("Digite a altura da parede em metros: ");
+    scanf("%f", &altura);
+
+    area = largura * altura;
+
+    tinta_necessaria = area * CONSUMO_TINTA_M2;
+
+    latas_necessarias = tinta_necessaria / CAPACIDADE_LATA_ML;
+
+    if (latas_necessarias - (int)latas_necessarias > 0) {
+        latas_necessarias = (int)latas_necessarias + 1;
+    } else {
+        latas_necessarias = (int)latas_necessarias;
+    }
+    
+    printf("Quantidade de latas de tinta necessárias: %.0f\n", latas_necessarias);
+
+    return 0;
+}
