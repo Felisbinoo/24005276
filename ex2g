@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    float pressão, volume, temperatura;
+
+    printf("Digite a pressão do pneu (em psi ou lbs): ");
+    scanf("%f", &pressão);
+
+    printf("Digite o volume do pneu (em litros): ");
+    scanf("%f", &volume);
+
+    printf("Digite a temperatura do pneu (em graus Celsius): ");
+    scanf("%f", &temperatura);
+
+    printf("\nDados do pneu:\n");
+    printf("Pressão: %.2f psi ou lbs\n", pressão);
+    printf("Volume: %.2f litros\n", volume);
+    printf("Temperatura: %.2f graus Celsius\n", temperatura);
+
+    return 0;
+}
