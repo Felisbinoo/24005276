@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+    int main() {
+    unsigned long long n = 4000000000ULL; 
+    printf("%llu\n", n);
+    return 0;
+
+O problema está na parte que o número proposto não é suportado apenas como n, devido ao seu tamanho ele se enquadra em long long n.
