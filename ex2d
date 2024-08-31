@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+    double raio;
+    double area;
+
+    printf("Digite o raio do círculo: ");
+    scanf("%lf", &raio);
+
+    area = M_PI * raio * raio;
+
+    printf("A área do círculo de raio %.2f é %.2f.\n", raio, area);
+
+    return 0;
