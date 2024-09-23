@@ -1,0 +1,91 @@
+Questão 1- alternativa C)                                                                         Questão 2- alternativa B)
+
+int main() {                                                                                      int main() {
+int num;                                                                                          int a, b;
+printf("Digite um número: ");                                                                     float media;
+scanf("%d", &num);                                                                                printf("Digite dois números: ");
+if ( num > 0) {                                                                                   scanf("%d %d", &a, &b);
+printf("Número positivo\n");                                                                      media = (a + b) / 2.0;
+}                                                                                                 printf("Média: %.2f\n",
+return 0;                                                                                         media);
+}                                                                                                 return 0;
+                                                                                                  }
+
+
+
+
+Questão 3 
+A)
+int main() {
+double Celsius, Fahrenheit;
+printf ("Digite a temperatura em Fahrenheit: ");
+scanf ("%lf", &Fahrenheit);
+Celsius = (Fahrenheit - 32.0) * (5.0/9.0);
+printf("A temperatura em Celsius é de: %.1lf", Celsius);
+return 0;
+}
+//Executando 276 em Fahrenheits, obteremos em Celsius 135.6.
+
+B)
+int main() {
+int Celsius, Fahrenheit;
+printf ("Digite a temperatura em Fahrenheit: ");
+scanf ("%d", &Fahrenheit);
+Celsius = (Fahrenheit - 32) * (5/9);
+printf("A temperatura em Celsius é de: %d", Celsius);
+return 0;
+}
+//Executando 276 em Fahrenheits, obteremos em Celsius 0, visto que na fórmula, ao calcular 5 divido por 9, obteremos 0,55, e, como declaramos como números inteiros, ele interpreta como 0, fazendo com que toda multiplicação fique 0.
+
+
+
+
+Questão 4
+
+#include <stdio.h>
+
+int main() {
+    float temperatura;
+
+    printf("Digite a temperatura atual em graus Celsius: ");
+    scanf("%f", &temperatura);
+
+    if (temperatura <= 0) {
+        printf("Geleira - Temperatura muito fria!\n");
+    } else if (temperatura >= 1 && temperatura <= 15) {
+        printf("Frio - Pode precisar de um casaco!\n");
+    } else if (temperatura >= 16 && temperatura <= 25) {
+        printf("Agradável - Tempo bom para sair!\n");
+    } else if (temperatura >= 26 && temperatura <= 35) {
+        printf("Quente - Ótimo para um dia de praia!\n");
+    } else {
+        printf("Muito quente - Mantenha-se hidratado!\n");
+    }
+
+    return 0;
+}
+
+
+
+Questão 5
+
+#include <stdio.h>
+
+int main() {
+    float temperatura;
+
+    printf("Digite a temperatura atual do depósito em graus Celsius: ");
+    scanf("%f", &temperatura);
+
+    if (temperatura < -10) {
+        printf("Risco Baixo - Armazenamento ideal para alimentos congelados.\n");
+    } else if (temperatura >= -10 && temperatura <= 0) {
+        printf("Risco Moderado - Condições aceitáveis para armazenamento refrigerado.\n");
+    } else if ((temperatura >= 1 && temperatura <= 10) || temperatura == 15) {
+        printf("Risco Elevado - Monitore a temperatura.\n");
+    } else {
+        printf("Risco Crítico - Ação Imediata Necessária!\n");
+    }
+
+    return 0;
+}
