@@ -1,0 +1,9 @@
+-Iniciar vídeo realizando um tutorial de como instalar o arduino no computador.
+-Logo após isso, fazer uma introdução sobre o “sistema” da programação do arduino, relação com o código em C e etc.
+-Depois disso, mostrar o/os códigos e explicar passo a passo (o que é possível explicar). Explicar cada comando (int, float, note, string, etc). 
+-Dar um contexto sobre cada “bloco” do código e cada função no código geral. 
+-Explicar como esse código funciona e relacionar com o hardware (Arduíno).
+-Mostrar o Arduíno e explicar cada componente presente.
+-Em seguida, explicar o que é e como funciona o Hardware do Arduíno. 
+-Após isso, explicar qual o contexto e área que esse projeto se aplica.
+-Mostrar novamente tudo em um contexto geral, explicar o nível de dificuldade para a recriação desse projeto, ensinar como realizar essa estrutura novamente e, em seguida, iniciar o teste final e exercício do projeto (seja ele qual for).
