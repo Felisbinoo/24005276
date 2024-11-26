@@ -1,0 +1,41 @@
+
+  Buscamos criar o nosso projeto integrador com o objetivo de poder compartilhar, por meio da programação em código e hardware Arduíno, nosso desenvolvimento e aprendizado durante todo esse semestre na matéria de Algoritmos e Robótica.
+ Nosso principal objetivo foi poder criar um projeto que fosse abrangente tanto na área virtual quanto na área física, e pudesse ser algo que fosse interessante para o público assistir,
+ mas, ao mesmo tempo, que fosse também simples de se criar e reproduzir em qualquer lugar e por qualquer pessoa. 
+
+  A criação do vídeo se faz parte vital do “corpo” do projeto, visto que é o momento onde tudo é explicado e mostrado,
+ desde o processo inicial para a reprodução desse projeto baixando o programa onde tudo foi projetado e programado até o momento onde iniciamos a simulação e podemos ver tudo funcionando em plena qualidade. 
+
+  O vídeo realizado consegue entregar, de forma detalhada e bem desenvolvida, um passo a passo da criação do nosso trabalho, mostrando todo o desenvolvimento dele e, também, buscando explicar bloco por bloco do nosso programa,
+ como fizemos para criá-lo, quais estruturas foram aprendidas durante a matéria e aplicadas nesse código.
+
+ Os materiais físicos utilizados são poucos, mas extremamente importantes e muito bem abordados e ensinados durante todo o semestre, sendo eles: 
+
+ -Arduino (Nestre projeto utilizamos o UNO).
+
+ -Protoboard.
+
+ -LED.
+
+ -BUZZER.
+
+ -Resistor.
+
+ -Jumpers.
+
+ Já no âmbito virtual, os meios utilizados para conseguir desenvolver tais processos foram: 
+ -Programa Arduino.
+
+ -Programa Tinkercad.
+
+  Arduino consiste em uma plataforma programável de placa única e código aberto, ou seja, uma placa física e um programa virtual. O usuário precisa programar um código dentro desse aplicativo no computador,
+ e, ao conectar a placa física ao computador por meio de um cabo USB, esse programa vai transmitir as informações diretamente para a placa.
+ Essa placa possui diferentes portas, tanto analógicas como digitais, além de conectores positivos e negativos para formar um circuito que funcione corretamente. A criação física depende também (na maioria dos casos) do uso de uma protoboard.
+
+  Já o Tinkercad é um aplicativo que possui diversas funções, entre elas simular a criação de um circuito físico no meio digital,
+ ou seja, ele simula a criação do circuito físico que deveria ser feito de forma prática no próprio computador, facilitando a vida do usuário,
+ visto que tem a liberdade de desenvolver e testar diferentes coisas no meio digital antes mesmo de possuir a oportunidade de agir de forma prática acerca de tal projeto. 
+
+  O vídeo está explicando todo o processo e tudo necessário para que o público entenda passo a passo do que foi realizado, pensado, desenvolvido e finalizado.
+ Esperamos que o público consiga de fato entender tudo, sem arestas e sem saltos de desenvolvimento. Tudo nesse projeto foi realizado com o objetivo de expor nosso próprio aprendizado durante a matéria e repassar esses ensinamentos adiante,
+ para que todos possam também entender nosso projeto, criar um senso crítico acerca de tal conteúdo, conhecer novas matérias, e, principalmente, desenvolver um interesse pelo conteúdo, pelas inovações, pelas novidades, e pelo curso de algoritmos e robótica.
