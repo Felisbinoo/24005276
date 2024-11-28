@@ -1,62 +1,107 @@
-#define LED 3
-#define BUZZER 5
+// Mapeamento de Hardware
+#define    LED  5
+#define BUZZER  3
 
-String codigo[] = { ".-", "-...", "-.-.", "-..", ".", //A-E
-                   "..-.", "--.", "....", "..", ".---", //F-J
-                   "-.-", ".-..", "--", "-.", "---", //K-O
-                   ".--.", "--.-", ".-.", "...", "-", //P-T
-                   "..-", "...-", ".--", "-..-", "-.--", "--..", //U-Z
-                   "-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----."}; //0-9
+// Vetor que armazena o código morse equivalente a cada letra
+String codigo[] = {  ".-" , "-..." , "-.-." ,  "-.." ,    "." ,           //A,B,C,D,E
+                   "..-." ,  "--." , "...." ,   ".." , ".---" ,           //F,G,H,I,J
+                    "-.-" , ".-.." ,   "--" ,   ".-" ,  "---" ,           //K,L,M,N,O
+                   ".--." , "--.-" ,  ".-." ,  "..." ,    "-" ,           //P,Q,R,S,T
+                    "..-" , "...-" ,  ".--" , "-..-" , "-.--" , "--.."    //U,V,W,X,Y,Z                                                                   
+                  };
 
-String mensagem = "PROJETO"; //Qualquer mensagem pode ser inserida nesta parte que será devidamente codificada
+// Variável para armazenar a mensagem inserida pelo usuário
+String mensagem = "";
 
-void on_output (String pos);
+// Protótipo das funções
+void on_output(String pos);
 void output_ponto();
 void output_traco();
 void codifica_string(String mens);
 
-void setup(){ 
+void setup() {
+  // Inicializa a comunicação serial
+  Serial.begin(9600);
+  
+  // O LED e o BUZZER são saídas e iniciam desligados
   pinMode(LED,OUTPUT);
   pinMode(BUZZER,OUTPUT);
   digitalWrite(LED,LOW);
   digitalWrite(BUZZER,LOW);
-  
-  codifica_string(mensagem);
+
+  // Exibe uma mensagem de boas-vindas e instrução no monitor serial
+  Serial.println("Bem-vindo ao codificador Morse!");
+  Serial.println("Digite a mensagem a ser codificada (somente letras A-Z):");
+
+  // Loop infinito para permitir várias tentativas
+  while (true) {
+    // Aguarda até o usuário inserir uma mensagem
+    while (Serial.available() == 0) {
+      // Espera o usuário digitar a mensagem
+    }
+
+    // Lê a mensagem do monitor serial
+    mensagem = Serial.readString();
+    
+    // Converte a mensagem para maiúsculas, para garantir que seja codificada corretamente
+    mensagem.toUpperCase();
+
+    // Exibe a mensagem que o usuário digitou
+    Serial.print("Mensagem a ser codificada: ");
+    Serial.println(mensagem);
+    
+    // Função que vai codificar a mensagem em código morse
+    codifica_string(mensagem);
+    
+    // Aguarda o usuário para inserir nova mensagem após 2 segundos
+    Serial.println("\nDigite uma nova mensagem ou reinicie o Arduino.");
+    delay(2000);
+  }
 }
 
 void loop(){}
 
+//Função que vai analisar cada caractere do código morse
 void on_output(String caractere){
-  for(int i= 0; i <caractere.length(); i++){
+  for(int i=0; i<caractere.length(); i++){
     if(caractere[i] == '.'){
-      output_ponto; 
+      output_ponto();
     }
     else if(caractere[i] == '-'){
-      output_traco;
-    }
+      output_traco();
+    }   
   }
 }
-void output_ponto(){ 
+
+//Função que vai dar o sinal curto (ponto)
+void output_ponto(){
   digitalWrite(LED,HIGH);
   digitalWrite(BUZZER,HIGH);
-  delay(100);
+  delay(75);
   digitalWrite(LED,LOW);
   digitalWrite(BUZZER,LOW);
-  delay(100);
+  delay(75);
 }
+
+//Função que vai dar o sinal longo (traço)
 void output_traco(){
   digitalWrite(LED,HIGH);
   digitalWrite(BUZZER,HIGH);
-  delay(300);
+  delay(200);
   digitalWrite(LED,LOW);
   digitalWrite(BUZZER,LOW);
-  delay(300);
+  delay(200);
 }
+
+//Função que vai codificar a mensagem em código morse
 void codifica_string(String mens){
   int posicao_codigo;
-  for(int i=0; i<mens.length();i++){
-    posicao_codigo = ((int) mens[i])-65;
-    on_output(codigo[posicao_codigo]);
-delay(500);
- }                      
+  for(int i=0; i<mens.length(); i++){
+    posicao_codigo = ((int)mens[i])-65;        //Transforma cada string em seu correspondente na tabela ascii
+    if (posicao_codigo >= 0 && posicao_codigo < 26) { // Verifica se é uma letra válida (A-Z)
+      on_output(codigo[posicao_codigo]);
+      delay(500);
+    }
+  }
 }
+
